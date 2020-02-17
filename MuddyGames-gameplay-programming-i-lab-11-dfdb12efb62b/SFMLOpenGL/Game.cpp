@@ -170,14 +170,21 @@ void Game::initialize()
 
 
 
-	vertex[0].coordinate[0] = -1.0f; // Front face
-	vertex[0].coordinate[1] = -1.0f;
-	vertex[0].coordinate[2] = 1.0f;
+	vertex[20].coordinate[0] = -1.0f; // Bottom face
+	vertex[20].coordinate[1] = -1.0f;
+	vertex[20].coordinate[2] = 1.0f;
 
-	vertex[3].coordinate[0] = -1.0f;
-	vertex[3].coordinate[1] = 1.0f;
-	vertex[3].coordinate[2] = 1.0f;
+	vertex[21].coordinate[0] = -1.0f;
+	vertex[21].coordinate[1] = 1.0f;
+	vertex[21].coordinate[2] = 1.0f;
 
+	vertex[22].coordinate[0] = -1.0f;
+	vertex[22].coordinate[1] = 1.0f;
+	vertex[22].coordinate[2] = -1.0f;
+
+	vertex[23].coordinate[0] = -1.0f; 
+	vertex[23].coordinate[1] = -1.0f;
+	vertex[23].coordinate[2] = -1.0f;
 
 
 
@@ -239,18 +246,50 @@ void Game::initialize()
 
 
 
+	//Texture coordinates
+	vertex[0].texel[0] = 0.25f; //Front face
+	vertex[0].texel[1] = 0.50f;
+
+	vertex[1].texel[0] = 0.50f;
+	vertex[1].texel[1] = 0.50f;
+
+	vertex[2].texel[0] = 0.50f;
+	vertex[2].texel[1] = 0.25f;
+
+	vertex[3].texel[0] = 0.25f;
+	vertex[3].texel[1] = 0.25f;
+
+
+	vertex[4].texel[0] = 0.75f;  //Back face
+	vertex[4].texel[1] = 0.50f;
+
+	vertex[5].texel[0] = 1.0f;
+	vertex[5].texel[1] = 0.50f;
+
+	vertex[6].texel[0] = 1.0f;
+	vertex[6].texel[1] = 0.75f;
+
+	vertex[7].texel[0] = 0.75f;
+	vertex[7].texel[1] = 0.55f;
 
 
 
-	vertex[0].texel[0] = 0.0f;
-	vertex[0].texel[1] = 0.0f;
 
-	vertex[1].texel[0] = 1.0f;
-	vertex[1].texel[1] = 0.0f;
+	//vertex[4].coordinate[0] = -1.0f;  //Back face
+	//vertex[4].coordinate[1] = -1.0f;
+	//vertex[4].coordinate[2] = -1.0f;
 
-	vertex[2].texel[0] = 1.0f;
-	vertex[2].texel[1] = 1.0f;
+	//vertex[5].coordinate[0] = 1.0f;
+	//vertex[5].coordinate[1] = -1.0f;
+	//vertex[5].coordinate[2] = -1.0f;
 
+	//vertex[6].coordinate[0] = 1.0f;
+	//vertex[6].coordinate[1] = 1.0f;
+	//vertex[6].coordinate[2] = -1.0f;
+
+	//vertex[7].coordinate[0] = -1.0f;
+	//vertex[7].coordinate[1] = 1.0f;
+	//vertex[7].coordinate[2] = -1.0f;
 
 
 
