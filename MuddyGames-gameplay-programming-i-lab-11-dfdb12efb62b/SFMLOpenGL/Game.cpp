@@ -104,35 +104,35 @@ void Game::initialize()
 	vertex[4].coordinate[0] = -1.0f;  //Back face
 	vertex[4].coordinate[1] = -1.0f;
 	vertex[4].coordinate[2] = -1.0f;
-
-	vertex[5].coordinate[0] = 1.0f;
-	vertex[5].coordinate[1] = -1.0f;
+	
+	vertex[5].coordinate[0] = -1.0f;
+	vertex[5].coordinate[1] = 1.0f;
 	vertex[5].coordinate[2] = -1.0f;
 
 	vertex[6].coordinate[0] = 1.0f;
 	vertex[6].coordinate[1] = 1.0f;
 	vertex[6].coordinate[2] = -1.0f;
 
-	vertex[7].coordinate[0] = -1.0f;
-	vertex[7].coordinate[1] = 1.0f;
+	vertex[7].coordinate[0] = 1.0f;
+	vertex[7].coordinate[1] = -1.0f;
 	vertex[7].coordinate[2] = -1.0f;
 
 
-	vertex[8].coordinate[0] = -1.0f; // Left face
+	vertex[8].coordinate[0] = 1.0f;	// Left face
 	vertex[8].coordinate[1] = -1.0f;
-	vertex[8].coordinate[2] = 1.0f;
-
-	vertex[9].coordinate[0] = 1.0f;
+	vertex[8].coordinate[2] = -1.0f;	
+	
+	vertex[9].coordinate[0] = -1.0f;
 	vertex[9].coordinate[1] = -1.0f;
-	vertex[9].coordinate[2] = 1.0f;
+	vertex[9].coordinate[2] = -1.0f;
 
-	vertex[10].coordinate[0] = -1.0f;
+	vertex[10].coordinate[0] = -1.0f; 
 	vertex[10].coordinate[1] = -1.0f;
-	vertex[10].coordinate[2] = -1.0f;
+	vertex[10].coordinate[2] = 1.0f;
 
 	vertex[11].coordinate[0] = 1.0f;
 	vertex[11].coordinate[1] = -1.0f;
-	vertex[11].coordinate[2] = -1.0f;
+	vertex[11].coordinate[2] = 1.0f;
 
 
 	vertex[12].coordinate[0] = 1.0f;  //Right face
@@ -141,7 +141,7 @@ void Game::initialize()
 
 	vertex[13].coordinate[0] = -1.0f;
 	vertex[13].coordinate[1] = 1.0f;
-	vertex[13].coordinate[2] = 1.0f;
+	vertex[13].coordinate[2] = -1.0f;
 
 	vertex[14].coordinate[0] = -1.0f;
 	vertex[14].coordinate[1] = 1.0f;
@@ -149,7 +149,7 @@ void Game::initialize()
 
 	vertex[15].coordinate[0] = -1.0f;
 	vertex[15].coordinate[1] = 1.0f;
-	vertex[15].coordinate[2] = -1.0f;
+	vertex[15].coordinate[2] = 1.0f;
 
 
 	vertex[16].coordinate[0] = -1.0f; //Top face
@@ -246,50 +246,90 @@ void Game::initialize()
 
 
 
-	//Texture coordinates
-	vertex[0].texel[0] = 0.25f; //Front face
+	//Texture coordinates	
+	
+	vertex[0].texel[0] = 0.0f;  //Left face
 	vertex[0].texel[1] = 0.50f;
 
-	vertex[1].texel[0] = 0.50f;
+	vertex[1].texel[0] = 0.25f;
 	vertex[1].texel[1] = 0.50f;
 
-	vertex[2].texel[0] = 0.50f;
+	vertex[2].texel[0] = 0.25f;
 	vertex[2].texel[1] = 0.25f;
 
-	vertex[3].texel[0] = 0.25f;
+	vertex[3].texel[0] = 0.0f;
 	vertex[3].texel[1] = 0.25f;
 
 
-	vertex[4].texel[0] = 0.75f;  //Back face
+	vertex[4].texel[0] = 0.25f; //Front face
 	vertex[4].texel[1] = 0.50f;
 
-	vertex[5].texel[0] = 1.0f;
+	vertex[5].texel[0] = 0.50f;
 	vertex[5].texel[1] = 0.50f;
 
-	vertex[6].texel[0] = 1.0f;
-	vertex[6].texel[1] = 0.75f;
+	vertex[6].texel[0] = 0.50f;
+	vertex[6].texel[1] = 0.25f;
 
-	vertex[7].texel[0] = 0.75f;
-	vertex[7].texel[1] = 0.55f;
-
-
+	vertex[7].texel[0] = 0.25f;
+	vertex[7].texel[1] = 0.25f;	
 
 
-	//vertex[4].coordinate[0] = -1.0f;  //Back face
-	//vertex[4].coordinate[1] = -1.0f;
-	//vertex[4].coordinate[2] = -1.0f;
+	vertex[8].texel[0] = 0.50f;  //Right face
+	vertex[8].texel[1] = 0.50f;
 
-	//vertex[5].coordinate[0] = 1.0f;
-	//vertex[5].coordinate[1] = -1.0f;
-	//vertex[5].coordinate[2] = -1.0f;
+	vertex[9].texel[0] = 0.75f;
+	vertex[9].texel[1] = 0.50f;
 
-	//vertex[6].coordinate[0] = 1.0f;
-	//vertex[6].coordinate[1] = 1.0f;
-	//vertex[6].coordinate[2] = -1.0f;
+	vertex[10].texel[0] = 0.75f;
+	vertex[10].texel[1] = 0.25f;
 
-	//vertex[7].coordinate[0] = -1.0f;
-	//vertex[7].coordinate[1] = 1.0f;
-	//vertex[7].coordinate[2] = -1.0f;
+	vertex[11].texel[0] = 0.50f;
+	vertex[11].texel[1] = 0.25f;
+	
+
+	vertex[12].texel[0] = 0.75f;  //Back face
+	vertex[12].texel[1] = 0.50f;
+
+	vertex[13].texel[0] = 1.0f;
+	vertex[13].texel[1] = 0.50f;
+
+	vertex[14].texel[0] = 1.0f;
+	vertex[14].texel[1] = 0.25f;
+
+	vertex[15].texel[0] = 0.75f;
+	vertex[15].texel[1] = 0.25f;
+
+
+	vertex[16].texel[0] = 0.25f;  //Top face
+	vertex[16].texel[1] = 0.75f;
+
+	vertex[17].texel[0] = 0.50f;
+	vertex[17].texel[1] = 0.75f;
+
+	vertex[18].texel[0] = 0.50f;
+	vertex[18].texel[1] = 0.50f;
+
+	vertex[19].texel[0] = 0.25f;
+	vertex[19].texel[1] = 0.50f;
+
+
+	vertex[20].texel[0] = 0.25f;  //Bottom face
+	vertex[20].texel[1] = 0.0f;
+
+	vertex[21].texel[0] = 0.50f;
+	vertex[21].texel[1] = 0.0f;
+
+	vertex[22].texel[0] = 0.50f;
+	vertex[22].texel[1] = 0.25f;
+
+	vertex[23].texel[0] = 0.25f;
+	vertex[23].texel[1] = 0.25f;
+
+
+
+
+
+
 
 
 
@@ -297,18 +337,23 @@ void Game::initialize()
 	/*Index of Poly / Triangle to Draw */
 	triangles[0] = 0;   triangles[1] = 1;	triangles[2] = 2;
 	triangles[3] = 2;   triangles[4] = 3;	triangles[5] = 0;
-	triangles[6] = 3;	triangles[7] = 7;	triangles[8] = 4;
-	triangles[9] = 4;   triangles[10] = 0;	triangles[11] = 3;
-	triangles[12] = 4;   triangles[13] = 7;	triangles[14] = 6;
-	triangles[15] = 6;	triangles[16] = 5;	triangles[17] = 4;
-	triangles[18] = 6;   triangles[19] = 2;	triangles[20] = 1;
-	triangles[21] = 1;	triangles[22] = 5;	triangles[23] = 6;
-	triangles[24] = 6;	triangles[25] = 7;	triangles[26] = 3;
-	triangles[27] = 3;	triangles[28] = 2;	triangles[29] = 6;
-	triangles[30] = 0;	triangles[31] = 4;	triangles[32] = 5;
-	triangles[33] = 5;	triangles[34] = 1;	triangles[35] = 0;
 
-	for (int i = 0; i < 8; i++)
+	triangles[6] = 4;	triangles[7] = 5;	triangles[8] = 6;
+	triangles[9] = 6;   triangles[10] = 7;	triangles[11] = 4;
+
+	triangles[12] = 8;   triangles[13] = 9;	triangles[14] = 10;
+	triangles[15] = 10;	triangles[16] = 11;	triangles[17] = 8;
+
+	triangles[18] = 12;   triangles[19] = 13;	triangles[20] = 14;
+	triangles[21] = 14;	triangles[22] = 15;	triangles[23] = 12;
+
+	triangles[24] = 16;	triangles[25] = 17;	triangles[26] = 18;
+	triangles[27] = 18;	triangles[28] = 19;	triangles[29] = 16;
+
+	triangles[30] = 20;	triangles[31] = 21;	triangles[32] = 22;
+	triangles[33] = 22;	triangles[34] = 23;	triangles[35] = 20;
+
+	for (int i = 0; i < 24; i++)
 	{
 		Vector3 vector{ vertex[i].coordinate[0],vertex[i].coordinate[1],vertex[i].coordinate[2] };
 
@@ -468,7 +513,7 @@ void Game::update()
 		//Rotate Right
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Right)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 				vector = Matrix3::RotationY(0.8) * vector;
@@ -480,7 +525,7 @@ void Game::update()
 		//Rotate Left
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Left)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 				vector = Matrix3::RotationY(-0.8) * vector;
@@ -492,7 +537,7 @@ void Game::update()
 		//Rotate Up
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 				vector = Matrix3::RotationX(0.8) * vector;
@@ -504,7 +549,7 @@ void Game::update()
 		//Rotate Down
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 				vector = Matrix3::RotationX(-0.8) * vector;
@@ -519,7 +564,7 @@ void Game::update()
 		//Increase Scale
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Equal)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 
@@ -532,7 +577,7 @@ void Game::update()
 		//Decrease Scale
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Dash)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 
@@ -548,7 +593,7 @@ void Game::update()
 		//Translate +
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Period)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 
@@ -563,7 +608,7 @@ void Game::update()
 		//Translate -
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Comma)))
 		{
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 24; i++)
 			{
 				Vector3 vector{ vertex[i].coordinate[0], vertex[i].coordinate[1], vertex[i].coordinate[2] };
 
